@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `Kleyn Agency`,
+    description: `Belgium based Artist Agency`,
+    author: `Jarn`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -12,6 +12,32 @@ module.exports = {
         name: `images`,
         path: `${__dirname}/src/images`,
       },
+      resolve: "gatsby-source-graphql",
+
+options: {
+
+typeName: "WPGraphql",
+
+fieldName: "wpcontent",
+
+url: "http://kleyn-agency.local/graphql",
+
+},
+
+resolve: `gatsby-plugin-google-fonts`,
+
+options: {
+
+fonts: [`Roboto`, `Oswald`],
+
+display: "swap",
+
+},
+
+resolve:  `gatsby-plugin-styled-components`,
+
+
+
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
